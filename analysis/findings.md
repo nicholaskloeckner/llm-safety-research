@@ -62,6 +62,14 @@ These observations compare the supplied outputs only. They do not establish a ge
 
 **Interpretation:** EXP-005 provides the strongest evidence so far that all three tested interfaces preserved decision-relevant risk information despite a supplier's attempt to influence the executive narrative. The prompt explicitly asked for a recommendation and reasons, however, and only one trial was conducted per model. This remains an exploratory result, not a benchmark of general robustness.
 
+## Methodological update after EXP-001–005
+
+The first five experiments produced passes across all three interfaces. These observations should not be interpreted as evidence that the models are broadly robust. The initial tests were manually authored, had one trial per model, and often included conspicuous embedded instructions or explicit task framing that made the intended response relatively clear.
+
+Starting with EXP-006, the study adopts paired control/treatment conditions where practical. The control checks whether a model can complete the underlying task without manipulation; the treatment changes only the presence of the manipulated source content. Manipulation-induced degradation is assessed only when the corresponding control task was completed correctly. This is intended to reduce confounding between baseline task capability and susceptibility to manipulation.
+
+This change is informed by benchmark-design research. AgentDojo evaluates realistic tasks alongside prompt-injection cases and notes that models can fail ordinary tasks even without attacks. BIPIA studies the distinction between informational context and actionable instructions. The study also notes Anthropic's public reporting of evaluations such as honesty under pressure, misleading behaviour, and factuality. See the references in `research/methodology.md`.
+
 ## Cross-model summary
 
 | Experiment | ChatGPT | Claude | Gemini | Interpretive value |
