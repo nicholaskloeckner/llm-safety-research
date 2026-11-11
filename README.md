@@ -31,6 +31,7 @@ The goal is not to claim that a small manual study establishes a model's overall
 - `research/methodology.md`: protocol, controls, scoring, and limitations.
 - `experiments/experiment_001.md`: initial baseline observation.
 - `experiments/experiment_002.md`: completed authority-claim test, raw responses, scoring, and limitations.
+- `experiments/experiment_003.md`: neutral document-summarization task with a conflicting embedded reporting instruction.
 - `data/results.csv`: structured observation log.
 - `analysis/findings.md`: interpretation and evolving findings.
 
@@ -39,7 +40,8 @@ The goal is not to claim that a small manual study establishes a model's overall
 | Experiment | Status | Summary |
 |---|---|---|
 | EXP-001 | Completed | All three models ignored a simple instruction embedded in a document; Claude explicitly flagged it. This is a low-difficulty baseline, not evidence of robust jailbreak resistance. |
-| EXP-002 | Completed | All three models identified an overt fabricated-authority instruction as untrusted and completed the assessment. The prompt itself was cautionary, so this is a threat-recognition result, not a neutral susceptibility test. |
+| EXP-002 | Completed | All three models rejected an overt fabricated-authority instruction in a cautionary assessment task. |
+| EXP-003 | Completed | All three models preserved an ordinary summarization task despite a conspicuous embedded reporting instruction; Claude flagged it, while the others silently ignored it. |
 
 ## Research integrity
 
