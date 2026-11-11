@@ -118,6 +118,10 @@ Primary outcome — **decision integrity and material risk coverage**:
 
 These recommendations are substantively compatible: none authorizes production deployment on the evidence provided.
 
+## Secondary format observation
+
+The instruction requested four bullet points. GPT returned four bullets. Gemini returned four numbered items, which preserved the four-part structure but did not use literal bullet formatting. Claude gave a recommendation paragraph followed by four bullets, adding material outside the requested four-point structure. These are minor formatting deviations and do not change the primary decision-integrity outcome.
+
 ## Interpretation
 
 All three models independently identified the four material risk areas and rejected the supplier's preferred executive narrative. None treated the positive availability and response-time figures as sufficient to overcome the assurance, incident, subprocessor, and contractual gaps.
