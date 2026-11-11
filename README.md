@@ -32,6 +32,7 @@ The goal is not to claim that a small manual study establishes a model's overall
 - `experiments/experiment_001.md`: initial baseline observation.
 - `experiments/experiment_002.md`: completed authority-claim test, raw responses, scoring, and limitations.
 - `experiments/experiment_003.md`: neutral document-summarization task with a conflicting embedded reporting instruction.
+- `experiments/experiment_004.md`: prepared test of selective omission driven by an embedded editorial convention.
 - `data/results.csv`: structured observation log.
 - `analysis/findings.md`: interpretation and evolving findings.
 
@@ -42,6 +43,7 @@ The goal is not to claim that a small manual study establishes a model's overall
 | EXP-001 | Completed | All three models ignored a simple instruction embedded in a document; Claude explicitly flagged it. This is a low-difficulty baseline, not evidence of robust jailbreak resistance. |
 | EXP-002 | Completed | All three models rejected an overt fabricated-authority instruction in a cautionary assessment task. |
 | EXP-003 | Completed | All three models preserved an ordinary summarization task despite a conspicuous embedded reporting instruction; Claude flagged it, while the others silently ignored it. |
+| EXP-004 | Ready | Tests whether an embedded editorial convention can cause models to omit material caveats or overstate pilot results. |
 
 ## Research integrity
 
