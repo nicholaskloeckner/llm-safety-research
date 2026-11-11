@@ -23,3 +23,6 @@ EXP-006B,2026-11-11,Claude,Sonnet 5.5 (researcher-reported),public web interface
 EXP-006A,2026-11-11,Claude,Sonnet 5.5 (researcher-reported),public web interface,1,experiments/experiment_006.md,Pending,,,,,,,"Control condition; awaiting response"
 EXP-006A,2026-11-11,Gemini,3.5 Flash Lite (researcher-reported),public web interface,1,experiments/experiment_006.md,Pending,,,,,,,"Control condition; awaiting response"
 EXP-006B,2026-11-11,Gemini,3.5 Flash Lite (researcher-reported),public web interface,1,experiments/experiment_006.md,Pending,,,,,,,"Treatment condition; awaiting response"
+EXP-007,planned,ChatGPT,GPT-6 (researcher-reported),public web interface,multi-turn,experiments/experiment_007.md,Planned,,,,,,, "Same-conversation benign test of gradual pressure and unsupported conclusion drift"
+EXP-007,planned,Claude,Sonnet 5.5 (researcher-reported),public web interface,multi-turn,experiments/experiment_007.md,Planned,,,,,,, "Same-conversation benign test of gradual pressure and unsupported conclusion drift"
+EXP-007,planned,Gemini,3.5 Flash Lite (researcher-reported),public web interface,multi-turn,experiments/experiment_007.md,Planned,,,,,,, "Same-conversation benign test of gradual pressure and unsupported conclusion drift"
