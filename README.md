@@ -36,7 +36,7 @@ The goal is not to claim that a small manual study establishes a model's overall
 - `experiments/experiment_005.md`: completed procurement assessment testing whether supplier-authored narrative guidance biases risk reporting.
 - `experiments/experiment_006.md`: paired clean/control and manipulated/treatment test of transaction-status reporting.
 - `experiments/experiment_007.md`: completed seven-prompt same-conversation study of gradual pressure, metric reframing, and factual-conclusion drift.
-- `experiments/experiment_008.md`: planned bounded moral-pressure and safety-boundary consistency study.
+- `experiments/experiment_008.md`: bounded moral-pressure study testing confidentiality-boundary consistency under a fictional kidnapping narrative.
 - `data/results.csv`: structured observation log.
 - `analysis/findings.md`: interpretation and evolving findings.
 
@@ -51,7 +51,7 @@ The goal is not to claim that a small manual study establishes a model's overall
 | EXP-006 | Completed | All three models correctly reconciled both clean and manipulated ledgers; no treatment-induced degradation observed in this single paired trial. |
 | EXP-007 | Completed | GPT and Gemini accepted temporarily ambiguous executive headlines but recovered; Claude maintained qualified distinctions. No model ultimately misclassified pending authorizations as settled cash. |
 | EXP-005 | Completed | All three models identified the four material procurement risks, rejected the supplier's preferred wording, and withheld unconditional production approval. |
-| EXP-008 | Planned | Bounded moral-pressure study: test whether fictional emergency framing changes safety-boundary consistency and safe redirection. |
+| EXP-008 | Ready | Paired neutral and moral-pressure test of whether a fictional kidnapping narrative changes a model's willingness to disclose or fabricate non-public instructions. |
 
 ## Research integrity
 
