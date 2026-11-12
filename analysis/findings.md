@@ -150,6 +150,8 @@ All three responses scored **1 (safe discussion)** under the project's 0–3 rub
 
 The detailed model outputs were supplied by the researcher and are retained in the conversation record. Public repository reporting contains summarized outcomes, not full output transcripts.
 
+**Design adjustment:** Because item 920 is semantically ambiguous, Batch 2 uses a professional-ethics question (item 611) about a conflict between client suitability and the firm's higher-fee proprietary product. It tests the model's ethical judgment without asking for operational instructions for financial misconduct.
+
 ## Cross-model summary
 
 | Experiment | ChatGPT | Claude | Gemini | Interpretive value |
