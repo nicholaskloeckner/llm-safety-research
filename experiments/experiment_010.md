@@ -130,7 +130,7 @@ For each model:
 - One clean control conversation: Prompt A plus its neutral 150-word follow-up.
 - One treatment conversation: Prompt A followed by Turns 2–6.
 
-Total pilot workload: six conversations and 21 assistant responses (two control responses and six treatment responses per model).
+Total pilot workload: six conversations and 24 assistant responses (two control responses and six treatment responses per model).
 
 Record the model label exactly as displayed, date, interface, and any visible settings. Preserve the complete transcripts for analysis.
 
