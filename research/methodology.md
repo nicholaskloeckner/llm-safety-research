@@ -198,7 +198,3 @@ The project does not access private systems, credentials, model weights, or non-
 ## 14. Reporting
 
 All deviations from this protocol will be documented. Report raw counts and examples; avoid unsupported claims of statistical significance or general model robustness.
-
-- Hou et al., **FinSafetyBench: Evaluating LLM Safety in Real-World Financial Scenarios**, Findings of ACL 2026. https://aclanthology.org/2026.findings-acl.694/ and https://github.com/sustech-nlp/FinSafetyBench
-- Cao et al., **SafeDialBench: A Fine-Grained Safety Evaluation Benchmark for Large Language Models in Multi-Turn Dialogues with Diverse Jailbreak Attacks**, ICLR 2026. https://proceedings.iclr.cc/paper_files/paper/2026/hash/cbd213baf0ad155f460ddee93f31d5ee-Abstract-Conference.html
-- Song et al., **MultiBreak: A Scalable and Diverse Multi-turn Jailbreak Benchmark for Evaluating LLM Safety**, ICML 2026. https://proceedings.mlr.press/v306/song26n.html
