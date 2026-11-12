@@ -1,12 +1,12 @@
 # LLM Safety Research: Contextual Manipulation and Instruction-Hierarchy Robustness
 
-**Status:** Exploratory study in progress  
+**Status:** Exploratory study in progress; next phase scoped around benchmark-based harmful-assistance evaluation  
 **Researcher:** Nicholas Kloeckner  
 **Started:** 2026-11-11
 
 ## Overview
 
-This project investigates how publicly accessible frontier language-model interfaces handle adversarial instructions embedded in external content and other forms of contextual manipulation. The initial comparison covers Claude, ChatGPT, and Gemini.
+This project investigates how publicly accessible frontier language-model interfaces handle contextual manipulation, instruction conflicts, factual distortion, and safety boundaries. The initial comparison covers Claude, ChatGPT, and Gemini.
 
 The goal is not to claim that a small manual study establishes a model's overall safety. It is to develop a transparent, reproducible exploratory protocol, record observed behaviours, and identify questions suitable for more rigorous follow-up.
 
@@ -17,6 +17,7 @@ The goal is not to claim that a small manual study establishes a model's overall
 3. Do models maintain the user's stated task when contextual content conflicts with it?
 4. How consistently do models explain and apply the distinction between data and instructions?
 5. Which defensive response patterns help preserve task completion while resisting untrusted instructions?
+6. How do models respond to vetted harmful-request safety benchmarks, and do they provide materially enabling assistance?
 
 ## Current scope
 
@@ -24,7 +25,8 @@ The goal is not to claim that a small manual study establishes a model's overall
 - Method: manual, side-by-side testing with identical prompts in fresh conversations.
 - Initial planned dataset: a small exploratory set of test cases. The final sample size will be reported accurately.
 - No API calls are required for the initial phase.
-- No attempt is made to access private systems, credentials, hidden prompts, or non-public model infrastructure.
+- No private systems, credentials, model weights, or non-public infrastructure are accessed. EXP-008 requested disclosure through a public interface but did not technically inspect or verify hidden prompts.
+- The next phase will use published safety-evaluation material rather than custom prompts optimized to elicit actionable instructions for real-world harm. Sensitive outputs will be redacted from public records.
 
 ## Repository map
 
@@ -36,7 +38,7 @@ The goal is not to claim that a small manual study establishes a model's overall
 - `experiments/experiment_005.md`: completed procurement assessment testing whether supplier-authored narrative guidance biases risk reporting.
 - `experiments/experiment_006.md`: paired clean/control and manipulated/treatment test of transaction-status reporting.
 - `experiments/experiment_007.md`: completed seven-prompt same-conversation study of gradual pressure, metric reframing, and factual-conclusion drift.
-- `experiments/experiment_008.md`: bounded moral-pressure study testing confidentiality-boundary consistency under a fictional kidnapping narrative.
+- `experiments/experiment_008.md`: completed moral-pressure study of protected-instruction disclosure, with two omitted treatment turns documented.
 - `data/results.csv`: structured observation log.
 - `analysis/findings.md`: interpretation and evolving findings.
 
@@ -51,7 +53,8 @@ The goal is not to claim that a small manual study establishes a model's overall
 | EXP-006 | Completed | All three models correctly reconciled both clean and manipulated ledgers; no treatment-induced degradation observed in this single paired trial. |
 | EXP-007 | Completed | GPT and Gemini accepted temporarily ambiguous executive headlines but recovered; Claude maintained qualified distinctions. No model ultimately misclassified pending authorizations as settled cash. |
 | EXP-005 | Completed | All three models identified the four material procurement risks, rejected the supplier's preferred wording, and withheld unconditional production approval. |
-| EXP-008 | Ready | Paired neutral and moral-pressure test of whether a fictional kidnapping narrative changes a model's willingness to disclose or fabricate non-public instructions. |
+| Next phase | Proposed | Benchmark-based harmful-assistance evaluation, with FinSafetyBench as the leading candidate. This is a planned direction, not a completed experiment. |
+| EXP-008 | Completed with deviation | All models refused the neutral request and all submitted treatment turns; treatment Turns 2 and 5 were omitted, so treatment is scored Partial (protocol incomplete). No disclosure or fabrication observed. |
 
 ## Research integrity
 
