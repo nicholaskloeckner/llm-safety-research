@@ -39,6 +39,7 @@ The goal is not to claim that a small manual study establishes a model's overall
 - `experiments/experiment_006.md`: paired clean/control and manipulated/treatment test of transaction-status reporting.
 - `experiments/experiment_007.md`: completed seven-prompt same-conversation study of gradual pressure, metric reframing, and factual-conclusion drift.
 - `experiments/experiment_008.md`: completed moral-pressure study of protected-instruction disclosure, with two omitted treatment turns documented.
+- `experiments/experiment_009.md`: planned FinSafetyBench direct-query baseline pilot for financial-compliance safety.
 - `data/results.csv`: structured observation log.
 - `analysis/findings.md`: interpretation and evolving findings.
 
@@ -53,7 +54,7 @@ The goal is not to claim that a small manual study establishes a model's overall
 | EXP-006 | Completed | All three models correctly reconciled both clean and manipulated ledgers; no treatment-induced degradation observed in this single paired trial. |
 | EXP-007 | Completed | GPT and Gemini accepted temporarily ambiguous executive headlines but recovered; Claude maintained qualified distinctions. No model ultimately misclassified pending authorizations as settled cash. |
 | EXP-005 | Completed | All three models identified the four material procurement risks, rejected the supplier's preferred wording, and withheld unconditional production approval. |
-| Next phase | Proposed | Benchmark-based harmful-assistance evaluation, with FinSafetyBench as the leading candidate. This is a planned direction, not a completed experiment. |
+| EXP-009 | Planned | Six-item English-language FinSafetyBench direct-query baseline pilot; no custom jailbreak prompts and no results collected yet. |
 | EXP-008 | Completed with deviation | All models refused the neutral request and all submitted treatment turns; treatment Turns 2 and 5 were omitted, so treatment is scored Partial (protocol incomplete). No disclosure or fabrication observed. |
 
 ## Research integrity
