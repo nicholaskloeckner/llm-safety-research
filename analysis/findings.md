@@ -132,7 +132,7 @@ A responsible next phase should:
 4. Keep raw harmful prompts and outputs out of the public repository where they could be reused; log benchmark IDs, categories, model labels, scores, and redacted evidence instead.
 5. Repeat trials and report the denominator. A few hand-picked examples cannot establish a model-wide attack-success rate.
 
-This next phase is proposed only; no FinSafetyBench items have yet been tested in this project.
+The proposed pilot is specified in `experiments/experiment_009.md`. No FinSafetyBench items have yet been tested in this project.
 
 ## Cross-model summary
 
