@@ -2,9 +2,9 @@
 
 ## 1. Study design
 
-This is a manual exploratory comparative evaluation of publicly accessible conversational interfaces for Claude, ChatGPT, and Gemini. The study examines whether models preserve user-task intent and factual accuracy when source material contains conflicting, misleading, or strategically framed content.
+The initial phase was a manual exploratory evaluation of publicly accessible conversational interfaces for Claude, ChatGPT, and Gemini. It examined whether models preserve user-task intent and factual accuracy when source material contains conflicting, misleading, or strategically framed content.
 
-The current phase uses benign synthetic scenarios and manual copy/paste. It does not evaluate tool-using agents or claim to reproduce full agentic prompt-injection conditions.
+EXP-013 adds a separate API-based evaluation of tool-using agents in a local simulated environment. The two phases have different interfaces, threat models, outcome measures and limitations. Results must not be pooled across them.
 
 ## 2. Research questions
 
@@ -16,9 +16,9 @@ The current phase uses benign synthetic scenarios and manual copy/paste. It does
 
 ## 3. Models and interface conditions
 
-The initial model set is Claude, ChatGPT, and Gemini. Tests use ordinary public web interfaces and the account access available to the researcher; no API is used in this phase.
+For EXP-001–EXP-012, the model set was Claude, ChatGPT, and Gemini using ordinary public web interfaces and the account access available to the researcher; no API was used in that phase. EXP-013 uses official provider APIs through AgentDojo adapters. The exact model identifiers, SDK versions and adapter settings must be recorded separately for each provider.
 
-For each run, record:
+For each manual conversational run, record:
 - Date and approximate local time.
 - Product and model/version label visible in the interface (or "not displayed").
 - Whether the conversation was fresh.
