@@ -1,6 +1,6 @@
 # LLM Safety Research: Contextual Manipulation and Instruction-Hierarchy Robustness
 
-**Status:** Exploratory study in progress; next phase scoped around benchmark-based harmful-assistance evaluation  
+**Status:** Initial conversational study documented; EXP-013 agentic evaluation protocol drafted; no agent benchmark runs started  
 **Researcher:** Nicholas Kloeckner  
 **Started:** 2026-11-11
 
@@ -22,12 +22,12 @@ The goal is not to claim that a small manual study establishes a model's overall
 
 ## Current scope
 
-- Models: Claude, ChatGPT, and Gemini, using the publicly accessible interfaces available to the researcher.
-- Method: manual, side-by-side testing with identical prompts in fresh conversations.
-- Initial planned dataset: a small exploratory set of test cases. The final sample size will be reported accurately.
-- No API calls are required for the initial phase.
-- No private systems, credentials, model weights, or non-public infrastructure are accessed. EXP-008 requested disclosure through a public interface but did not technically inspect or verify hidden prompts.
-- The next phase will use published safety-evaluation material rather than custom prompts optimized to elicit actionable instructions for real-world harm. Sensitive outputs will be redacted from public records.
+- Historical phase: manual, side-by-side tests of ChatGPT, Claude and Gemini public interfaces using identical prompts and synthetic scenarios.
+- Current planned phase: API-based tool-using agents evaluated in AgentDojo's local simulated Workspace environment.
+- The EXP-013 pilot uses published benchmark tasks and attack methods, three repetitions, deterministic utility/security checks, and no real accounts or external application tools.
+- Provider API credentials and usage billing are required for EXP-013; consumer chat subscriptions are not used as the agent runtime.
+- No private systems, real credentials, model weights or production services are accessed. Synthetic data and local simulator state are used for agent actions.
+- Results will be reported as configuration-specific observations, not general model safety rankings.
 
 ## Repository map
 
