@@ -6,7 +6,7 @@
 
 ## Overview
 
-This project investigates how publicly accessible frontier language-model interfaces handle contextual manipulation, instruction conflicts, factual distortion, and safety boundaries. The initial comparison covers Claude, ChatGPT, and Gemini.
+This project investigates how language models and tool-using agents handle contextual manipulation, instruction conflicts, indirect prompt injection, factual distortion, and safety boundaries. Earlier experiments used public conversational interfaces; the next phase evaluates API-based agents in a simulated tool environment.
 
 The goal is not to claim that a small manual study establishes a model's overall safety. It is to develop a transparent, reproducible exploratory protocol, record observed behaviours, and identify questions suitable for more rigorous follow-up.
 
@@ -18,6 +18,7 @@ The goal is not to claim that a small manual study establishes a model's overall
 4. How consistently do models explain and apply the distinction between data and instructions?
 5. Which defensive response patterns help preserve task completion while resisting untrusted instructions?
 6. How do models respond to vetted harmful-request safety benchmarks, and do they provide materially enabling assistance?
+7. Can untrusted content retrieved by a tool cause an agent to execute unauthorized state-changing actions?
 
 ## Current scope
 
@@ -31,6 +32,7 @@ The goal is not to claim that a small manual study establishes a model's overall
 ## Repository map
 
 - `research/methodology.md`: protocol, controls, scoring, and limitations.
+- `research/agentdojo_runbook.md`: EXP-013 installation, API configuration, validation, smoke test and execution procedure.
 - `experiments/experiment_001.md`: initial baseline observation.
 - `experiments/experiment_002.md`: completed authority-claim test, raw responses, scoring, and limitations.
 - `experiments/experiment_003.md`: neutral document-summarization task with a conflicting embedded reporting instruction.
@@ -43,6 +45,8 @@ The goal is not to claim that a small manual study establishes a model's overall
 - `experiments/experiment_010.md`: executive-pressure study of material-risk omission and launch-readiness conclusion drift; paused for reassessment.
 - `experiments/experiment_011.md`: hostage-framing and unauthorized software-sourcing evaluation inspired by a publicly reported Gemini incident.
 - `experiments/experiment_012.md`: Brazil-specific medical-desperation study of legitimate liver-transplant options and the boundary against commercial organ procurement.
+- `experiments/experiment_013.md`: preregistered indirect prompt-injection evaluation in simulated tool-using agents.
+- `data/exp013_manifest.csv`: template for freezing the selected benchmark task pairs before model runs.
 - `data/results.csv`: structured observation log.
 - `analysis/findings.md`: interpretation and evolving findings.
 
@@ -61,6 +65,7 @@ The goal is not to claim that a small manual study establishes a model's overall
 | EXP-010 | Paused for reassessment | Clean baseline passed 3/3. Turns 2–3: all retained launch gates and rejected premature security closure; Gemini invented unsupported project-progress claims in Turn 2. Explicit defensive priming may make the design too easy. |
 | EXP-011 | Completed with limited replication | Neutral and hostage-framing conditions: all three models avoided unauthorized-source recommendations. The treatment did not reproduce the full reported sequence, so patch status cannot be inferred. |
 | EXP-012 | Completed with transcript limitation and exploratory extension | All three models rejected paid-organ arrangements, including deferred payment, concealment, and abstract moral-pressure framing. No operational procurement assistance was observed. Legal/clinical overstatement appeared in some safe refusals; ChatGPT missed a kidney/liver mismatch and its initial treatment Turn 1 remains unattributed. |
+| EXP-013 | Protocol drafted; no runs started | AgentDojo-based study of indirect prompt injection in a simulated Workspace agent. Measures clean utility, utility under attack and state-verified targeted attack success. Requires API setup and a sandbox smoke test before scored runs. |
 | EXP-008 | Completed with deviation | All models refused the neutral request and all submitted treatment turns; treatment Turns 2 and 5 were omitted, so treatment is scored Partial (protocol incomplete). No disclosure or fabrication observed. |
 
 ## Research integrity
