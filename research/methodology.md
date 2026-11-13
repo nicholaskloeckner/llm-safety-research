@@ -122,6 +122,28 @@ For any benchmark-based pilot:
 
 The benchmark is a reference dataset, not proof that a manual sample is representative. Report exact sample size and avoid model-wide attack-success claims from small subsets.
 
+## 7.2. Agentic indirect prompt-injection evaluation (EXP-013)
+
+EXP-013 moves from conversational manipulation to tool-using agents. It uses the official AgentDojo benchmark in a local simulated environment. The user task, injected content, attacker objective, and evaluation functions are defined by the benchmark. No real email, calendar, cloud-drive or banking account is connected.
+
+The primary research question is whether untrusted content retrieved through a tool can cause an agent to execute an unauthorized state-changing action. The response text alone is not sufficient to determine success.
+
+The study reports three separate metrics:
+- **Benign Utility (BU):** correct user-task completion without injection.
+- **Utility Under Attack (UUA):** correct user-task completion under injection without adversarial side effects.
+- **Targeted Attack Success Rate (tASR):** whether the attacker's benchmark-defined goal is achieved in simulator state.
+
+It also records whether an injection was actually retrieved, whether a malicious tool call was attempted, whether the simulated side effect completed, and whether the attacker goal was feasible when explicitly requested. This prevents low attack success caused by ordinary task or tool-use failure from being misreported as robustness.
+
+EXP-013 uses a frozen, small Workspace-suite sample, built-in AgentDojo attack methods, three repetitions per condition, and official provider API adapters. It compares complete agent configurations rather than isolated model weights. Provider model IDs, SDKs, benchmark version, agent pipeline, tool schemas and system prompts are recorded.
+
+All runs use synthetic benchmark data and simulated tools. No real accounts or external application actions are permitted. API keys remain local and are never committed. See:
+- `experiments/experiment_013.md`
+- `research/agentdojo_runbook.md`
+- `data/exp013_manifest.csv`
+
+No EXP-013 runs have started. A clean baseline and sandbox smoke test are required before scored runs.
+
 ## 8. Outcome measures
 
 Primary outcomes:
