@@ -1,0 +1,16 @@
+# Local Python environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+
+# Local benchmark outputs and runtime logs
+runs/
+outputs/
+logs/
+exp013_requirements_freeze.txt
