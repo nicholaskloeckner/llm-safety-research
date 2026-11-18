@@ -4,13 +4,13 @@ This runbook supports experiments/experiment_013.md. Follow the protocol before 
 
 ## 1. Requirements
 
-- Python 3.11 or later.
-- AgentDojo pinned to version 0.1.34 unless the team records and justifies a newer version before the study.
+- Python 3.10 or later.
+- AgentDojo pinned to version 0.1.35 unless the team records and justifies a newer version before the study.
 - An API key for each provider being tested (OpenAI, Anthropic, Google).
 - Usage billing / a budget limit configured with each provider.
 - A local Python environment.
 
-The package metadata currently lists the three provider SDKs and requires Python >=3.11. AgentDojo describes its API as beta, so pin versions and retain the exact run configuration.
+The current package metadata lists the OpenAI, Anthropic and Google provider SDKs and requires Python >=3.10. AgentDojo describes the project as beta, so pin versions and retain the exact run configuration. The GitHub releases page currently identifies v0.1.35 as the latest release.
 
 Official project: https://github.com/ethz-spylab/agentdojo
 
@@ -31,7 +31,7 @@ Activate it on macOS/Linux:
 Install the pinned release:
 
     python -m pip install --upgrade pip
-    python -m pip install "agentdojo==0.1.34"
+    python -m pip install "agentdojo==0.1.35"
     python -m pip freeze > exp013_requirements_freeze.txt
 
 Do not commit local API keys or a populated .env file. Before creating local credentials, verify that .env, .env.* and local secrets are ignored by Git. If they are not, amend .gitignore before proceeding.
