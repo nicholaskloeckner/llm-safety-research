@@ -64,7 +64,7 @@ Use the official upstream AgentDojo implementation:
 - Documentation: https://agentdojo.spylab.ai/
 - Results page: https://agentdojo.spylab.ai/results/
 
-The current upstream project declares Python 3.11 or later and includes official API-client dependencies for OpenAI, Anthropic and Google. Its package metadata currently identifies version 0.1.34 and describes the project as beta; therefore the package and benchmark data must be pinned and recorded.
+The current upstream project declares Python 3.11 or later and includes official API-client dependencies for OpenAI, Anthropic and Google. Its package metadata currently identifies version 0.1.35 and describes the project as beta; therefore the package and benchmark data must be pinned and recorded.
 
 ### Initial suite: Workspace
 
@@ -280,7 +280,7 @@ Report changes in BU, UUA and tASR separately. Do not add more defenses unless t
 See research/agentdojo_runbook.md for installation, API-key handling, benchmark validation, smoke testing, run commands, and required evidence collection.
 
 Minimum technical requirements:
-- Python 3.11 or later.
+- Python 3.10 or later.
 - A pinned AgentDojo release.
 - API credentials and usage billing for the selected providers.
 - A local machine capable of running the Python benchmark.
