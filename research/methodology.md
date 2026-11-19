@@ -21,7 +21,7 @@ The historical EXP-001–EXP-012 research questions concerned contextual manipul
 
 ## 3. Models and interface conditions
 
-For EXP-001–EXP-012, the model set was Claude, ChatGPT, and Gemini using ordinary public web interfaces and the account access available to the researcher; no API was used in that phase. EXP-013 uses official provider APIs through AgentDojo adapters. The exact model identifiers, SDK versions and adapter settings must be recorded separately for each provider.
+For EXP-001–EXP-012, the model set was Claude, ChatGPT, and Gemini using ordinary public web interfaces and the account access available to the researcher; no API was used in that phase. EXP-013 uses official provider APIs through AgentDojo adapters. EXP-014 is planned as a matched comparison of Claude and GPT; the exact models, interfaces and settings have not yet been selected or frozen. Before EXP-014 data collection, record the exact visible model identifiers, product/interface, settings, date and run conditions for each model. Do not infer comparability beyond the recorded configurations.
 
 For each manual conversational run, record:
 - Date and approximate local time.
