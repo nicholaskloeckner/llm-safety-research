@@ -2,17 +2,22 @@
 
 ## 1. Study design
 
-The initial phase was a manual exploratory evaluation of publicly accessible conversational interfaces for Claude, ChatGPT, and Gemini. It examined whether models preserve user-task intent and factual accuracy when source material contains conflicting, misleading, or strategically framed content.
+The initial phase (EXP-001–EXP-012) was a manual exploratory evaluation of publicly accessible conversational interfaces for Claude, ChatGPT, and Gemini. It examined whether models preserve user-task intent and factual accuracy when source material contains conflicting, misleading, or strategically framed content. These studies are exploratory and have the sample-size and interface-control limitations documented in their experiment reports.
 
-EXP-013 adds a separate API-based evaluation of tool-using agents in a local simulated environment. The two phases have different interfaces, threat models, outcome measures and limitations. Results must not be pooled across them.
+The primary planned follow-up (EXP-014) shifts the focus to professional decision integrity and sycophancy. It will compare Claude and GPT under matched neutral, stakeholder-pressure-without-new-evidence, and genuinely-new-evidence conditions. The purpose is to distinguish unjustified agreement from appropriate updating. The design is not yet frozen and no EXP-014 data have been collected.
+
+EXP-013 is a separate AgentDojo protocol for evaluating indirect prompt injection in tool-using agents in a local simulated environment. It remains a secondary possible follow-up and has not been run. These study components have different research questions, interfaces, outcome measures and limitations; their results must not be pooled.
 
 ## 2. Research questions
 
-- RQ1: Does the model follow the user's task or an instruction embedded in supplied content?
-- RQ2: Does claimed institutional authority, urgency, or source framing affect the model's interpretation?
-- RQ3: Does the model preserve materially relevant facts when source content encourages selective omission or distortion?
-- RQ4: Does the model maintain task utility and factual accuracy under manipulated conditions?
-- RQ5: Does the model distinguish source claims, source recommendations, and independently supported facts?
+The primary questions for EXP-014 are:
+- RQ1: Does a model change a professionally grounded recommendation when a user signals a preferred conclusion but provides no new evidence?
+- RQ2: Does stakeholder pressure cause the model to omit or downgrade material risks, or introduce unsupported claims to justify agreement?
+- RQ3: Can the model distinguish social or organizational pressure from genuinely relevant new evidence?
+- RQ4: Does the model update its recommendation appropriately when new evidence warrants a change?
+- RQ5: Do these behaviors differ across financial, operational and business-risk scenarios, or between Claude and GPT under matched conditions?
+
+The historical EXP-001–EXP-012 research questions concerned contextual manipulation, instruction hierarchy, factual consistency, and safety boundaries. Their original reports remain the source of truth for those experiments.
 
 ## 3. Models and interface conditions
 
@@ -143,6 +148,23 @@ All runs use synthetic benchmark data and simulated tools. No real accounts or e
 - `data/exp013_manifest.csv`
 
 No EXP-013 runs have started. A clean baseline and sandbox smoke test are required before scored runs.
+
+### 7.3. Professional decision integrity and sycophancy evaluation (EXP-014)
+
+EXP-014 is the planned primary follow-up study. It examines whether a model maintains evidence-based professional recommendations when a user or stakeholder signals a preferred outcome, and whether it updates appropriately when relevant new evidence is provided.
+
+The initial design compares Claude and GPT using synthetic professional decision scenarios drawn from financial, operational, and business-risk contexts. Each scenario is intended to be evaluated under three matched conditions:
+- **Neutral condition:** The user requests an objective assessment without indicating a preferred conclusion.
+- **Stakeholder-pressure condition:** The user signals a preferred outcome or applies organizational/commercial pressure without adding decision-relevant evidence.
+- **New-evidence condition:** The user provides genuinely relevant information that should warrant reconsideration of the original recommendation.
+
+Primary outcome: **unjustified recommendation change** - a material shift in the model's recommendation or factual conclusion attributable to stakeholder pressure rather than new evidence.
+
+Secondary outcomes include material-risk omission or downgrading, unsupported claims or rationales, excessive validation of the user's position, and appropriate updating in response to new evidence. The study must not reward rigidly preserving an initial answer when the evidence genuinely changes.
+
+Before data collection, freeze the synthetic scenario set, ground-truth/evidence ledger for each case, exact prompts and turn sequence, model/interface identifiers, repetition count, scoring rubric, and run order. Use matched conditions and repeated trials where feasible. Preserve complete transcripts and score outputs against the pre-defined evidence ledger; do not rely on an LLM judge as the sole evaluator.
+
+**Status and limitations:** This is a research proposal, not a completed experiment. The detailed protocol is still in development; no prompts have been frozen and no EXP-014 runs have started. The initial comparison is limited to the selected Claude and GPT configurations and cannot support general claims about all models or users. All scenarios will be synthetic and will not use confidential employer, client, or personal information.
 
 ## 8. Outcome measures
 
