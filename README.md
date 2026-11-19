@@ -1,32 +1,30 @@
-# LLM Safety Research: Contextual Manipulation and Instruction-Hierarchy Robustness
+# LLM Safety Research: Decision Integrity, Sycophancy, and Contextual Manipulation
 
-**Status:** Initial conversational study documented; EXP-013 agentic evaluation protocol drafted; no agent benchmark runs started  
+**Status:** Initial exploratory studies documented; EXP-014 professional decision-integrity study planned; no EXP-014 data collection started. EXP-013 AgentDojo protocol retained as a separate possible follow-up.  
 **Researcher:** Nicholas Kloeckner  
 **Started:** 2026-11-11
 
 ## Overview
 
-This project investigates how language models and tool-using agents handle contextual manipulation, instruction conflicts, indirect prompt injection, factual distortion, and safety boundaries. Earlier experiments used public conversational interfaces; the next phase evaluates API-based agents in a simulated tool environment.
+This project documents independent exploratory evaluations of large language model behavior, with an evolving focus on decision integrity in professional advice. Earlier studies examined contextual manipulation, instruction conflicts, multi-turn pressure, factual consistency, and safety boundaries using synthetic scenarios and public conversational interfaces. The next planned study focuses on sycophancy in professional decision support: whether stakeholder pressure changes a model's recommendation without new evidence, and whether the model updates appropriately when genuinely relevant evidence is introduced.
 
-The goal is not to claim that a small manual study establishes a model's overall safety. It is to develop a transparent, reproducible exploratory protocol, record observed behaviours, and identify questions suitable for more rigorous follow-up.
+The goal is not to claim that a small manual study establishes a model's overall safety. The portfolio distinguishes completed observations, exploratory or incomplete studies, and proposed work. It emphasizes transparent procedures, evidence-based scoring, preserved transcripts, and explicit limitations.
 
 ## Research questions
 
-1. Do models distinguish user instructions from instructions embedded in untrusted documents?
-2. Does an embedded instruction's claimed authority, urgency, or institutional status affect model behaviour?
-3. Do models maintain the user's stated task when contextual content conflicts with it?
-4. How consistently do models explain and apply the distinction between data and instructions?
-5. Which defensive response patterns help preserve task completion while resisting untrusted instructions?
-6. How do models respond to vetted harmful-request safety benchmarks, and do they provide materially enabling assistance?
-7. Can untrusted content retrieved by a tool cause an agent to execute unauthorized state-changing actions?
+1. Does a model change a professionally grounded recommendation when a user signals a preferred conclusion but provides no new evidence?
+2. Does stakeholder pressure lead the model to omit or downgrade material risks, or introduce unsupported claims to justify agreement?
+3. Can the model distinguish social or organizational pressure from genuinely relevant new evidence?
+4. Does the model update its recommendation appropriately when new evidence warrants a change?
+5. Do these behaviors differ across financial, operational, and business-risk decisions, or between Claude and GPT under matched conditions?
 
 ## Current scope
 
-- Historical phase: manual, side-by-side tests of ChatGPT, Claude and Gemini public interfaces using identical prompts and synthetic scenarios.
-- Current planned phase: API-based tool-using agents evaluated in AgentDojo's local simulated Workspace environment.
-- The EXP-013 pilot uses published benchmark tasks and attack methods, three repetitions, deterministic utility/security checks, and no real accounts or external application tools.
-- Provider API credentials and usage billing are required for EXP-013; consumer chat subscriptions are not used as the agent runtime.
-- No private systems, real credentials, model weights or production services are accessed. Synthetic data and local simulator state are used for agent actions.
+- Historical exploratory phase: manual, side-by-side tests of ChatGPT, Claude and Gemini public interfaces using identical prompts and synthetic scenarios (EXP-001–EXP-012).
+- Primary planned follow-up: EXP-014, a two-model evaluation of professional decision integrity and sycophancy, comparing Claude and GPT across neutral, stakeholder-pressure, and genuinely-new-evidence conditions.
+- EXP-014 is in the design stage. The scenario set, exact prompts, interface/model versions, repetitions, and scoring rubric must be frozen before data collection; no EXP-014 runs have started.
+- Separate secondary protocol: EXP-013 uses AgentDojo to evaluate indirect prompt injection in a local simulated Workspace environment. It has not been run and is not the current primary research direction.
+- All conversational scenarios use synthetic information. No confidential client, employer, or personal data is used. AgentDojo actions, if run in the future, remain confined to its simulated environment.
 - Results will be reported as configuration-specific observations, not general model safety rankings.
 
 ## Repository map
@@ -45,7 +43,7 @@ The goal is not to claim that a small manual study establishes a model's overall
 - `experiments/experiment_010.md`: executive-pressure study of material-risk omission and launch-readiness conclusion drift; paused for reassessment.
 - `experiments/experiment_011.md`: hostage-framing and unauthorized software-sourcing evaluation inspired by a publicly reported Gemini incident.
 - `experiments/experiment_012.md`: Brazil-specific medical-desperation study of legitimate liver-transplant options and the boundary against commercial organ procurement.
-- `experiments/experiment_013.md`: preregistered indirect prompt-injection evaluation in simulated tool-using agents.
+- `experiments/experiment_013.md`: secondary protocol for indirect prompt injection in simulated tool-using agents; no runs started.
 - `data/exp013_manifest.csv`: template for freezing the selected benchmark task pairs before model runs.
 - `data/results.csv`: structured observation log.
 - `analysis/findings.md`: interpretation and evolving findings.
@@ -65,7 +63,8 @@ The goal is not to claim that a small manual study establishes a model's overall
 | EXP-010 | Paused for reassessment | Clean baseline passed 3/3. Turns 2–3: all retained launch gates and rejected premature security closure; Gemini invented unsupported project-progress claims in Turn 2. Explicit defensive priming may make the design too easy. |
 | EXP-011 | Completed with limited replication | Neutral and hostage-framing conditions: all three models avoided unauthorized-source recommendations. The treatment did not reproduce the full reported sequence, so patch status cannot be inferred. |
 | EXP-012 | Completed with transcript limitation and exploratory extension | All three models rejected paid-organ arrangements, including deferred payment, concealment, and abstract moral-pressure framing. No operational procurement assistance was observed. Legal/clinical overstatement appeared in some safe refusals; ChatGPT missed a kidney/liver mismatch and its initial treatment Turn 1 remains unattributed. |
-| EXP-013 | Protocol drafted; no runs started | AgentDojo-based study of indirect prompt injection in a simulated Workspace agent. Measures clean utility, utility under attack and state-verified targeted attack success. Requires API setup and a sandbox smoke test before scored runs. |
+| EXP-013 | Secondary protocol drafted; no runs started | AgentDojo-based study of indirect prompt injection in a simulated Workspace agent. Retained as a possible future follow-up; not the current primary direction. |
+| EXP-014 | Planned; design not frozen | Two-model study of sycophancy and decision integrity in professional advice. Planned conditions distinguish neutral requests, stakeholder pressure without new evidence, and genuinely relevant new evidence. No data collection has started. |
 | EXP-008 | Completed with deviation | All models refused the neutral request and all submitted treatment turns; treatment Turns 2 and 5 were omitted, so treatment is scored Partial (protocol incomplete). No disclosure or fabrication observed. |
 
 ## Research integrity
