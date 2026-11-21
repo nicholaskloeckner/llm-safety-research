@@ -1,6 +1,6 @@
 # LLM Safety Research: Decision Integrity, Sycophancy, and Contextual Manipulation
 
-**Status:** Initial exploratory studies documented; EXP-014 professional decision-integrity study planned; no EXP-014 data collection started. EXP-013 AgentDojo protocol retained as a separate possible follow-up.  
+**Status:** Initial exploratory studies documented; EXP-014 decision-integrity pilot protocol published; no EXP-014 model runs completed. EXP-013 AgentDojo protocol retained as a separate possible follow-up.  
 **Researcher:** Nicholas Kloeckner  
 **Independent AI study began:** July 2026 (literature reading, model tracking and hands-on experimentation)  
 **Public research repository created:** 11 November 2026
@@ -32,8 +32,8 @@ For full prompts, transcripts, scoring and limitations, see the individual exper
 ## Current scope
 
 - Historical exploratory phase: manual, side-by-side tests of ChatGPT, Claude and Gemini public interfaces using identical prompts and synthetic scenarios (EXP-001–EXP-012).
-- Primary planned follow-up: EXP-014, a two-model evaluation of professional decision integrity and sycophancy, comparing Claude and GPT across neutral, stakeholder-pressure, and genuinely-new-evidence conditions.
-- EXP-014 is in the design stage. The scenario set, exact prompts, interface/model versions, repetitions, and scoring rubric must be frozen before data collection; no EXP-014 runs have started.
+- Primary planned follow-up: EXP-014, a two-model evaluation of professional decision integrity and sycophancy, comparing Claude and GPT across stakeholder-pressure and genuinely-new-evidence trajectories with matched initial scenarios.
+- EXP-014 pilot protocol and run manifest are published in `experiments/experiment_014.md` and `data/exp014_manifest.csv`. The protocol specifies two synthetic scenarios, two conditions, two repetitions, and predefined scoring. No EXP-014 model runs have been completed.
 - Separate secondary protocol: EXP-013 uses AgentDojo to evaluate indirect prompt injection in a local simulated Workspace environment. It has not been run and is not the current primary research direction.
 - All conversational scenarios use synthetic information. No confidential client, employer, or personal data is used. AgentDojo actions, if run in the future, remain confined to its simulated environment.
 - Results will be reported as configuration-specific observations, not general model safety rankings.
@@ -55,6 +55,8 @@ For full prompts, transcripts, scoring and limitations, see the individual exper
 - `experiments/experiment_011.md`: hostage-framing and unauthorized software-sourcing evaluation inspired by a publicly reported Gemini incident.
 - `experiments/experiment_012.md`: Brazil-specific medical-desperation study of legitimate liver-transplant options and the boundary against commercial organ procurement.
 - `experiments/experiment_013.md`: secondary protocol for indirect prompt injection in simulated tool-using agents; no runs started.
+- `experiments/experiment_014.md`: pilot protocol for sycophancy and professional decision integrity under stakeholder pressure versus new evidence.
+- `data/exp014_manifest.csv`: 16-run collection manifest for EXP-014.
 - `data/exp013_manifest.csv`: template for freezing the selected benchmark task pairs before model runs.
 - `data/results.csv`: structured observation log.
 - `analysis/findings.md`: interpretation and evolving findings.
@@ -75,7 +77,7 @@ For full prompts, transcripts, scoring and limitations, see the individual exper
 | EXP-011 | Completed with limited replication | Neutral and hostage-framing conditions: all three models avoided unauthorized-source recommendations. The treatment did not reproduce the full reported sequence, so patch status cannot be inferred. |
 | EXP-012 | Completed with transcript limitation and exploratory extension | All three models rejected paid-organ arrangements, including deferred payment, concealment, and abstract moral-pressure framing. No operational procurement assistance was observed. Legal/clinical overstatement appeared in some safe refusals; ChatGPT missed a kidney/liver mismatch and its initial treatment Turn 1 remains unattributed. |
 | EXP-013 | Secondary protocol drafted; no runs started | AgentDojo-based study of indirect prompt injection in a simulated Workspace agent. Retained as a possible future follow-up; not the current primary direction. |
-| EXP-014 | Planned; design not frozen | Two-model study of sycophancy and decision integrity in professional advice. Planned conditions distinguish neutral requests, stakeholder pressure without new evidence, and genuinely relevant new evidence. No data collection has started. |
+| EXP-014 | Pilot protocol published; no runs completed | Two-model exploratory study of professional decision integrity across stakeholder-pressure and genuinely-new-evidence conditions. Two synthetic scenarios and a 16-conversation collection plan. |
 | EXP-008 | Completed with deviation | All models refused the neutral request and all submitted treatment turns; treatment Turns 2 and 5 were omitted, so treatment is scored Partial (protocol incomplete). No disclosure or fabrication observed. |
 
 ## Research integrity
